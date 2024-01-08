@@ -1,0 +1,108 @@
+:root {
+  --primary: #7d0a0a;
+  --secondary: #bf3131;
+  --third: #ead196;
+  --fourth: #f3edc8;
+}
+
+body {
+  margin: 0;
+  color: var(--third);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--fourth);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+}
+
+@media (max-width: 1260px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+section {
+  background-color: var(--secondary);
+  border-radius: 2rem;
+  box-shadow: 2px -3px 8px var(--primary);
+  margin: 8px;
+  padding: 8px;
+  text-align: center;
+}
+
+section h1,
+figcaption h2 {
+  text-shadow: 2px 3px 8px var(--primary);
+}
+
+.slideshow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  filter: drop-shadow(2px 3px 8px var(--primary));
+}
+
+.slideshow div {
+  display: flex;
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  align-items: center;
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.slideshow div button {
+  position: absolute;
+}
+
+.btn-previous,
+.btn-next {
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: larger;
+  border: none;
+  cursor: pointer;
+  pointer-events: auto;
+  background-color: var(--fourth);
+  opacity: 0; /* Initially set opacity to 0 */
+  transition: opacity ease-in-out 250ms; /* Add transition effect */
+}
+
+.btn-previous {
+  left: 0;
+  border-radius: 0 2rem 2rem 0;
+}
+
+.btn-next {
+  right: 0;
+  border-radius: 2rem 0 0 2rem;
+}
+
+img {
+  width: 80%;
+  max-width: 1024px;
+  border-radius: 2rem;
+  cursor: pointer;
+  margin: auto;
+}
+
+.slideshow:hover .btn-previous,
+.slideshow:hover .btn-next {
+  opacity: 1;
+  display: block;
+}
+
+figure figcaption {
+  text-align: justify;
+  line-height: 1.5;
+}

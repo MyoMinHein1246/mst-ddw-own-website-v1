@@ -1,0 +1,129 @@
+:root {
+  --primary: #7d0a0a;
+  --secondary: #bf3131;
+  --third: #ead196;
+  --fourth: #f3edc8;
+}
+
+body {
+  margin: 0;
+  color: var(--third);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--fourth);
+}
+
+nav {
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+nav > a {
+  font-size: larger;
+  border-radius: 0px 0px 2rem 0px;
+  background-color: var(--secondary);
+  color: var(--third);
+  padding: 1rem;
+  text-decoration: none;
+}
+
+@media (max-width: 1260px) {
+  nav ul li a {
+    font-size: small;
+    padding: 0.5rem;
+    margin: 0;
+  }
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  display: block;
+  color: var(--third);
+  padding: 1rem;
+  text-decoration: none;
+  transition: all ease-in-out 250ms;
+}
+
+nav ul li a:hover {
+  color: var(--fourth);
+}
+
+nav ul li button {
+  background-color: var(--secondary);
+  border-radius: 2rem;
+  border: 2px solid var(--third);
+  color: var(--third);
+  font-size: medium;
+  padding: 10px 1rem 10px 1rem;
+  cursor: pointer;
+  transition: all ease-in-out 250ms;
+}
+
+nav ul li button:hover {
+  background-color: var(--fourth);
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.container {
+  display: flex;
+  height: 80vh;
+  gap: 1rem;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container > a {
+  background-color: var(--secondary);
+  border-radius: 2rem;
+  text-align: center;
+  overflow: visible;
+  box-shadow: 2px 3px 8px var(--primary);
+  text-decoration: none;
+  cursor: pointer;
+  transition: box-shadow ease-in-out 250ms;
+}
+
+.container > a:hover .img-container img {
+  transform: scale(1.2);
+}
+
+.container > a:hover {
+  box-shadow: 0px 0px 32px var(--secondary);
+}
+
+.img-container {
+  padding: 1rem;
+}
+
+.img-container img {
+  display: block;
+  width: 100%;
+  margin: auto;
+  max-width: 256px;
+  border-radius: 1rem;
+  filter: drop-shadow(2px 3px 8px var(--primary));
+  transition: transform ease-in-out 250ms;
+}
+
+.container a p {
+  border-radius: 2rem;
+  color: var(--fourth);
+  font-size: large;
+  padding: 1em;
+  margin: 0;
+  background-color: var(--primary);
+}

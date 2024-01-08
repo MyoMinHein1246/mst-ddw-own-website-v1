@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lamborghini Cars</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/search.css" />
+    <link rel="stylesheet" href="./css/car-gallery.css" />
+
+    <script defer src="./js/car-gallery.js"></script>
+    <script defer src="./js/search.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a href="#">Caroom</a>
+      <ul>
+        <li>
+          <a href="./index.html">Browse</a>
+        </li>
+        <li>
+          <a href="./search.html">Search</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+        <li>
+          <button>Log In</button>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="search">
+      <form id="frm-search" onsubmit="searchCars(event)">
+        <input
+          type="text"
+          name="search"
+          id="txt-search"
+          placeholder="Search ..."
+        />
+        <button type="submit" id="btn-search">Search</button>
+      </form>
+    </div>
+
+    <main id="results"></main>
+  </body>
+</html>
