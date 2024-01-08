@@ -75,7 +75,7 @@ nav ul li button:hover {
 .container {
   display: flex;
   height: 80vh;
-  gap: 0.5rem;
+  gap: 1rem;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
@@ -101,7 +101,7 @@ nav ul li button:hover {
 }
 
 .img-container {
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .img-container img {
@@ -109,7 +109,7 @@ nav ul li button:hover {
   width: 100%;
   margin: auto;
   max-width: 256px;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   filter: drop-shadow(2px 3px 8px var(--primary));
   transition: transform ease-in-out 250ms;
 }
